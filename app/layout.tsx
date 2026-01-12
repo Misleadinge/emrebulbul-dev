@@ -15,12 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Emre Bülbül | Fullstack Developer & CS Student",
-  description: "Computer Science Student at Sabancı University & Fullstack Developer. Experienced in Go, Python, Flutter, and Web Development.",
+  description: "Computer Science Graduate from Sabancı University & Fullstack Developer. Experienced in Go, Python, Flutter, and Web Development.",
   keywords: ["Emre Bülbül", "Fullstack Developer", "Sabancı University", "Computer Science", "Software Engineer"],
   authors: [{ name: "Emre Bülbül" }],
   openGraph: {
     title: "Emre Bülbül | Fullstack Developer",
-    description: "Computer Science Student at Sabancı University & Fullstack Developer",
+    description: "Computer Science Gradute from Sabancı University & Fullstack Developer",
     type: "website",
   },
 };
