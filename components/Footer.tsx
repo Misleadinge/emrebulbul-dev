@@ -30,7 +30,7 @@ export default function Footer() {
                     >
                         <h3 className="text-xl font-bold gradient-text mb-2">Emre Bülbül</h3>
                         <p className="text-text-muted text-sm">
-                            Computer Science Student & Fullstack Developer
+                            Computer Science Graduate & Fullstack Developer
                         </p>
                     </motion.div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
                             <Linkedin className="w-5 h-5 text-text-muted group-hover:text-secondary transition-colors" />
                         </Link>
                         <Link
-                            href="mailto:emre@example.com"
+                            href="mailto:emrebulbul22@gmail.com"
                             className="p-3 rounded-xl glass hover:bg-purple-500/20 transition-all group"
                             aria-label="Email"
                         >
