@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emre Bülbül - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 14, featuring dark/light theme switching, an AI-powered chatbot, and interactive project showcases.
 
-First, run the development server:
+## 🚀 Features
+
+- **Dark/Light Theme** - Seamless theme switching with persistent preferences
+- **AI Chatbot** - Interactive assistant to answer questions about skills, experience, and projects
+- **Responsive Design** - Optimized for all devices and screen sizes
+- **Glassmorphism UI** - Modern, sleek design with glass-effect components
+- **Smooth Animations** - Framer Motion powered transitions and effects
+- **Project Filtering** - Dynamic filtering system for technical projects
+- **Skills Showcase** - Interactive skills display with category filtering
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS v3
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Theme:** next-themes
+- **Markdown:** react-markdown (for chatbot)
+- **Language:** TypeScript
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/misleadinge/emrebulbul-dev.git
+
+# Navigate to project directory
+cd emrebulbul-dev
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is deployed on [Vercel](https://vercel.com) and accessible at [emrebulbul.dev](https://emrebulbul.dev).
 
-## Learn More
+## 📝 License
 
-To learn more about Next.js, take a look at the following resources:
+© 2026 Emre Bülbül. All rights reserved.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 Connect
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **GitHub:** [github.com/misleadinge](https://github.com/misleadinge)
+- **LinkedIn:** [linkedin.com/in/emre-bulbul](https://linkedin.com/in/emre-bulbul)
+- **Website:** [emrebulbul.dev](https://emrebulbul.dev)
