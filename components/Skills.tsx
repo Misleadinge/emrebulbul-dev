@@ -2,155 +2,128 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+    SiGo, SiPython, SiCplusplus, SiJavascript, SiDotnet,
+    SiLinux, SiGnubash, SiApachespark, SiAndroidstudio, SiMongodb,
+    SiQt, SiBlender, SiAdobephotoshop, SiAdobeaftereffects,
+    SiAnaconda, SiDocker, SiGit, SiPostman
+} from "react-icons/si";
+import { FaMicrochip, FaDatabase, FaCode, FaMemory, FaCube } from "react-icons/fa";
+import { BsCpu } from "react-icons/bs";
+import { VscVscode } from "react-icons/vsc";
 
-const filterCategories = ["All", "Languages", "Tools", "Platforms", "Creative"];
+const filterCategories = ["All", "Languages", "Frontend", "Backend", "Tools", "Platforms"];
 
 const skills = [
     {
         name: "Go",
-        category: "Languages",
-        icon: "🔵",
-        color: "secondary",
+        category: "Backend",
+        icon: SiGo,
+        color: "#00ADD8",
     },
     {
         name: "Python",
-        category: "Languages",
-        icon: "🐍",
-        color: "primary",
+        category: "Backend",
+        icon: SiPython,
+        color: "#3776AB",
     },
     {
         name: "C++",
         category: "Languages",
-        icon: "⚡",
-        color: "purple",
+        icon: SiCplusplus,
+        color: "#00599C",
     },
     {
         name: "SQL",
-        category: "Languages",
-        icon: "🗄️",
-        color: "secondary",
+        category: "Backend",
+        icon: FaDatabase,
+        color: "#F29111",
     },
     {
         name: "JavaScript",
-        category: "Languages",
-        icon: "💛",
-        color: "primary",
+        category: "Frontend",
+        icon: SiJavascript,
+        color: "#F7DF1E",
     },
     {
         name: "C#",
-        category: "Languages",
-        icon: "💜",
-        color: "purple",
+        category: "Backend",
+        icon: SiDotnet,
+        color: "#512BD4",
     },
     {
         name: "Verilog",
         category: "Languages",
-        icon: "🔌",
-        color: "secondary",
+        icon: FaMicrochip,
+        color: "#FF6B35",
     },
     {
         name: "System Verilog",
         category: "Languages",
-        icon: "⚙️",
-        color: "primary",
+        icon: BsCpu,
+        color: "#E94560",
     },
     {
         name: "C",
         category: "Languages",
-        icon: "🔵",
-        color: "purple",
+        icon: FaCode,
+        color: "#A8B9CC",
     },
     {
         name: "Assembly",
         category: "Languages",
-        icon: "🔧",
-        color: "secondary",
+        icon: FaMemory,
+        color: "#6E4C13",
     },
     {
         name: "Linux",
         category: "Platforms",
-        icon: "🐧",
-        color: "primary",
+        icon: SiLinux,
+        color: "#FCC624",
     },
     {
         name: "Bash",
         category: "Platforms",
-        icon: "💻",
-        color: "secondary",
+        icon: SiGnubash,
+        color: "#4EAA25",
     },
     {
         name: "Spark",
-        category: "Tools",
-        icon: "⚡",
-        color: "primary",
-    },
-    {
-        name: "Xilinx Vivado",
-        category: "Tools",
-        icon: "🔬",
-        color: "purple",
+        category: "Backend",
+        icon: SiApachespark,
+        color: "#E25A1C",
     },
     {
         name: "Android Studio",
-        category: "Tools",
-        icon: "🤖",
-        color: "secondary",
+        category: "Frontend",
+        icon: SiAndroidstudio,
+        color: "#3DDC84",
     },
     {
         name: "MongoDB",
-        category: "Tools",
-        icon: "🍃",
-        color: "primary",
+        category: "Backend",
+        icon: SiMongodb,
+        color: "#47A248",
     },
     {
         name: "QT",
-        category: "Tools",
-        icon: "🎨",
-        color: "secondary",
-    },
-    {
-        name: "Blender",
-        category: "Creative",
-        icon: "🎭",
-        color: "primary",
-    },
-    {
-        name: "Cinema 4D",
-        category: "Creative",
-        icon: "🎬",
-        color: "purple",
-    },
-    {
-        name: "Photoshop",
-        category: "Creative",
-        icon: "🖼️",
-        color: "secondary",
-    },
-    {
-        name: "After Effects",
-        category: "Creative",
-        icon: "🎞️",
-        color: "primary",
+        category: "Frontend",
+        icon: SiQt,
+        color: "#41CD52",
     },
     {
         name: "Anaconda",
         category: "Tools",
-        icon: "🐍",
-        color: "secondary",
-    },
-    {
-        name: "Spyder",
-        category: "Tools",
-        icon: "🕷️",
-        color: "purple",
+        icon: SiAnaconda,
+        color: "#44A833",
     },
 ];
 
 const tools = [
-    { name: "Docker", icon: "🐳" },
-    { name: "Git", icon: "📦" },
-    { name: "VS Code", icon: "💻" },
-    { name: "Postman", icon: "📮" },
+    { name: "Docker", icon: SiDocker, color: "#2496ED" },
+    { name: "Git", icon: SiGit, color: "#F05032" },
+    { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+    { name: "Postman", icon: SiPostman, color: "#FF6C37" },
 ];
 
 const containerVariants = {
@@ -241,29 +214,32 @@ export default function Skills() {
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16"
                 >
                     <AnimatePresence mode="popLayout">
-                        {filteredSkills.map((skill) => (
-                            <motion.div
-                                key={skill.name}
-                                variants={itemVariants}
-                                initial="hidden"
-                                animate="visible"
-                                exit="exit"
-                                layout
-                                whileHover={{ y: -5, scale: 1.05 }}
-                                className="glass p-6 flex flex-col items-center text-center group cursor-pointer"
-                            >
-                                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                    {skill.icon}
-                                </div>
-                                <h3 className="font-bold text-lg mb-1">{skill.name}</h3>
-                                <p className={`text-xs ${skill.color === "primary" ? "text-primary" :
-                                    skill.color === "secondary" ? "text-secondary" :
-                                        "text-purple-500"
-                                    }`}>
-                                    {skill.category}
-                                </p>
-                            </motion.div>
-                        ))}
+                        {filteredSkills.map((skill) => {
+                            const Icon = skill.icon;
+                            return (
+                                <motion.div
+                                    key={skill.name}
+                                    variants={itemVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    layout
+                                    whileHover={{ y: -5, scale: 1.05 }}
+                                    className="glass p-6 flex flex-col items-center text-center group cursor-pointer"
+                                >
+                                    <div
+                                        className="mb-4 group-hover:scale-110 transition-transform duration-300"
+                                        style={{ color: skill.color }}
+                                    >
+                                        <Icon className="w-12 h-12" />
+                                    </div>
+                                    <h3 className="font-bold text-lg mb-1">{skill.name}</h3>
+                                    <p className="text-xs text-text-muted">
+                                        {skill.category}
+                                    </p>
+                                </motion.div>
+                            );
+                        })}
                     </AnimatePresence>
                 </motion.div>
 
@@ -287,7 +263,7 @@ export default function Skills() {
                     )}
                 </AnimatePresence>
 
-                {/* Tools & Technologies Section */}
+                {/* Development Tools Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -299,22 +275,28 @@ export default function Skills() {
                         Development Tools
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        {tools.map((tool, index) => (
-                            <motion.div
-                                key={tool.name}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.3, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                whileHover={{ y: -5 }}
-                                className="glass p-6 flex flex-col items-center text-center group cursor-pointer"
-                            >
-                                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                                    {tool.icon}
-                                </div>
-                                <p className="font-medium text-sm">{tool.name}</p>
-                            </motion.div>
-                        ))}
+                        {tools.map((tool, index) => {
+                            const Icon = tool.icon;
+                            return (
+                                <motion.div
+                                    key={tool.name}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    whileHover={{ y: -5 }}
+                                    className="glass p-6 flex flex-col items-center text-center group cursor-pointer"
+                                >
+                                    <div
+                                        className="mb-3 group-hover:scale-110 transition-transform duration-300"
+                                        style={{ color: tool.color }}
+                                    >
+                                        <Icon className="w-10 h-10" />
+                                    </div>
+                                    <p className="font-medium text-sm">{tool.name}</p>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </motion.div>
             </div>
