@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-    SiGo, SiPython, SiCplusplus, SiJavascript, SiDotnet,
+    SiGo, SiPython, SiCplusplus, SiJavascript, SiTypescript,
     SiLinux, SiGnubash, SiApachespark, SiAndroidstudio, SiMongodb,
-    SiQt, SiBlender, SiAdobephotoshop, SiAdobeaftereffects,
-    SiAnaconda, SiDocker, SiGit, SiPostman
+    SiQt, SiAnaconda, SiDocker, SiGit, SiPostman,
+    SiFlutter, SiReact, SiNextdotjs, SiFastapi, SiFlask
 } from "react-icons/si";
-import { FaMicrochip, FaDatabase, FaCode, FaMemory, FaCube } from "react-icons/fa";
-import { BsCpu } from "react-icons/bs";
+import { FaDatabase, FaCode, FaMemory } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
 const filterCategories = ["All", "Languages", "Frontend", "Backend", "Tools", "Platforms"];
@@ -46,22 +45,10 @@ const skills = [
         color: "#F7DF1E",
     },
     {
-        name: "C#",
-        category: "Backend",
-        icon: SiDotnet,
-        color: "#512BD4",
-    },
-    {
-        name: "Verilog",
-        category: "Languages",
-        icon: FaMicrochip,
-        color: "#FF6B35",
-    },
-    {
-        name: "System Verilog",
-        category: "Languages",
-        icon: BsCpu,
-        color: "#E94560",
+        name: "TypeScript",
+        category: "Frontend",
+        icon: SiTypescript,
+        color: "#3178C6",
     },
     {
         name: "C",
@@ -74,6 +61,36 @@ const skills = [
         category: "Languages",
         icon: FaMemory,
         color: "#6E4C13",
+    },
+    {
+        name: "Flutter",
+        category: "Frontend",
+        icon: SiFlutter,
+        color: "#02569B",
+    },
+    {
+        name: "React",
+        category: "Frontend",
+        icon: SiReact,
+        color: "#61DAFB",
+    },
+    {
+        name: "Next.js",
+        category: "Frontend",
+        icon: SiNextdotjs,
+        color: "#FFFFFF",
+    },
+    {
+        name: "FastAPI",
+        category: "Backend",
+        icon: SiFastapi,
+        color: "#009688",
+    },
+    {
+        name: "Flask",
+        category: "Backend",
+        icon: SiFlask,
+        color: "#FFFFFF",
     },
     {
         name: "Linux",
@@ -113,6 +130,7 @@ const skills = [
     },
     {
         name: "Anaconda",
+
         category: "Tools",
         icon: SiAnaconda,
         color: "#44A833",
